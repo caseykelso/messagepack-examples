@@ -18,9 +18,7 @@ add_executable( ${APP} example.cpp )
 add_custom_target(generate_version DEPENDS ${VERSION_HEADER})
 add_dependencies(${APP} generate_version)
 
-target_link_libraries(${APP}
-    msgpack
- )
+target_link_libraries(${APP} msgpackc)
 
 install(TARGETS ${APP} DESTINATION bin)
 
